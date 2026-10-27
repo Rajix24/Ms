@@ -5,5 +5,8 @@ import { adminProvided } from '../middlewares/admin-provided.js';
 import { returnedLoansReport } from '../controllers/analytics.controller.js';
 import { asyncHandler } from '../shared/async-handler.js';
 export const analyticsRouter = Router();
-analyticsRouter.get('/returned-loans/by-category', asyncHandler(authenticate),
-  adminProvided, asyncHandler(returnedLoansReport));
+
+
+
+
+analyticsRouter.get('/returned-loans/by-category', asyncHandler(authenticate),adminProvided, asyncHandler(returnedLoansReport));
